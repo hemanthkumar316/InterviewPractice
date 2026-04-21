@@ -1,8 +1,10 @@
 import React from 'react'
-
+import PauseResume from './PauseResume'
 const App = () => {
   return (
-    <div>App</div>
+    <div>
+      <PauseResume/>
+      </div>
   )
 }
 
