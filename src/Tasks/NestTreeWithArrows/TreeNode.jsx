@@ -1,7 +1,8 @@
 import React,{useState} from "react";
-
+import { IoCaretForwardSharp } from "react-icons/io5";
+import { IoCaretDown } from "react-icons/io5";
 const TreeNode=({ node, state, setState, roots, level = 0 })=> {
-  const [expanded, setExpanded] = useState(true);
+  const [expanded, setExpanded] = useState(false);
 
   const handleCheck = (e) => {
     const newState = { ...state };
@@ -32,7 +33,7 @@ const TreeNode=({ node, state, setState, roots, level = 0 })=> {
   <span style={{ display: "inline-block", width: 20 }}>
   {node.children ? (
     <span onClick={() => setExpanded(!expanded)} style={{cursor:'pointer'}}>
-      {expanded ? "▼" : "▶"}
+      {expanded ? <IoCaretDown /> : <IoCaretForwardSharp />}
     </span>
   ) : null}
 </span>
